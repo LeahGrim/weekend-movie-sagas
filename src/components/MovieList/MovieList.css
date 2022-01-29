@@ -2,8 +2,10 @@
     display : flex;
     flex-wrap: wrap;
     margin: auto;
+    padding: 10px;
     background-image: url("https://miro.medium.com/max/1200/1*CibHAfI3ZFllWUo7boRdZw.jpeg");
     background-size: fill;
+    border: 10px solid black;
 }
 
 .movieBox{
