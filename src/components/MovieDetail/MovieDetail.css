@@ -1,0 +1,18 @@
+.selectedMovieBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectedMovieDescription{
+    width: 800px;
+    align-items: center;
+    display: flex;
+    line-height: 1.5;
+}
+
+.selectedMovieImage{
+    border: 10px solid black;
+    padding: 0px;
+}

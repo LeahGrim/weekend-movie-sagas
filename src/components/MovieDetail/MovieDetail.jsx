@@ -8,19 +8,23 @@ function MovieDetail(){
     const selectedMovie = useSelector((store) => store.selectedMovie)
     
     useEffect(() => {
-            
+
     });
     return(
         <>
         <div className= "selectedMovieBox"> 
             <h2> {selectedMovie.title} </h2>
-            <div className= "selectedMovieImageDescription"> 
+            <div className= "selectedMovieImage"> 
                 <img src={selectedMovie.poster}
-                     width={500}
-                     height={600} 
-                    />    
-                <p> {selectedMovie.description} </p>
-            </div>
+                     width={700}
+                     height={650} 
+                    />   
+                    </div> 
+                    <div className="selectedMovieDescription"> 
+                          <h2>
+                          {selectedMovie.description} 
+                          </h2>
+                    </div>
         </div>
 
         </>
