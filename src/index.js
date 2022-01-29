@@ -32,7 +32,7 @@ function* fetchAllMovies() {
 //a reducer function that will take in movie title and movie id selected from the client 
 //and set the state to the individual movie clicked 
 //later we will display that state on the details page
-const sendMovieToDetailsPage= (state = {}, action) =>{
+const selectedMovie = (state = {}, action) =>{
     console.log('we are in the sendMovieToDetailsPage function');
     switch(action.type){
         case 'SET_SELECTED_MOVIE': 
@@ -69,7 +69,7 @@ const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
-        sendMovieToDetailsPage,
+        selectedMovie,
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
