@@ -60,7 +60,9 @@ const movies = (state = [], action) => {
 // provided when the client hits the movie in the homepage
 // the genre name titles will be put into the genres reducer 
 function* fetchGenreData (){
-
+  const genreData= yield axios.get(`/api/genre`);
+  console.log( 'genres from database are:', genreData);
+  yield put({type: 'SET_GENRES', payload: genreData.data})
 }
 
 // Used to store the movie genres

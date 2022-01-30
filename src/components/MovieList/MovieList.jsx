@@ -10,6 +10,7 @@ function MovieList() {
 
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
+        dispatch({type: 'FETCH_GENRE_INFO'});
     }, []);
 
     //function that runs on click of movie box, that brings client to details page
@@ -17,7 +18,7 @@ function MovieList() {
         //send the selected movie to movie object in redux (selectedMovie Redux function)
         dispatch({ type: 'SET_SELECTED_MOVIE', payload: movie })
         //once the movie is sent to the reducer, client is brought to details page
-        history.push('/details');
+        history.push(`/details`);
     }
 
     return (

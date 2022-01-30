@@ -7,9 +7,9 @@ const pool = require('../modules/pool')
 // that will send the genres.name to reducer dispatch within axios call in Movie Details
 router.get('/', (req, res) => {
   // Add query to get all genres
- console.log('req.body from genre router is', req.body);
   const query= 
               `SELECT 
+                	movies.title as movie_title,
                   genres.name as genre_title,
                   genres.id as genre_id,
                   movies.id as movie_id
@@ -17,7 +17,6 @@ router.get('/', (req, res) => {
                   JOIN "movies" ON "movies".id = "movies_genres".movie_id
                   JOIN "genres" ON "genres".id = "movies_genres".genre_id;`
         pool.query(query)
-        console.log('query is', query)
         .then( result => {
          res.send(result.rows);
       })
