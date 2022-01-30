@@ -14,6 +14,7 @@ import axios from 'axios';
 // Create the rootSaga generator function
 function* rootSaga() {
     yield takeEvery('FETCH_MOVIES', fetchAllMovies);
+    yield takeEvery('FETCH_GENRE_INFO', fetchGenreData)
 }
 
 function* fetchAllMovies() {
@@ -52,6 +53,14 @@ const movies = (state = [], action) => {
         default:
             return state;
     }
+}
+
+//goal of function is to do an axios.get call to retrieve 
+// the corresponding genre name that was given based on the movie id 
+// provided when the client hits the movie in the homepage
+// the genre name titles will be put into the genres reducer 
+function* fetchGenreData (){
+
 }
 
 // Used to store the movie genres

@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import './MovieDetail.css';
 import CabinIcon from '@mui/icons-material/Cabin';
 import { useHistory } from 'react-router-dom';
-
+import axios from 'axios';
 function MovieDetail(){
     //using history to push the user back to the homepage
     //chose this method over nav link for styling purposes
@@ -13,9 +13,9 @@ function MovieDetail(){
     const selectedMovie = useSelector((store) => store.selectedMovie)
   
     
-    useEffect(() => {
-
-    });
+    // useEffect(() => {
+    //   axios.get(`/api/genre/${selectedMovie.id}`)
+    // }, []);
 
     const homePageDirection= () => {
         history.push('/')
