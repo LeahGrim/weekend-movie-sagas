@@ -9,6 +9,7 @@ router.get('/', (req, res) => {
   // Add query to get all genres
   const query= 
               `SELECT 
+                	movies.title as movie_title,
                   genres.name as genre_title,
                   genres.id as genre_id,
                   movies.id as movie_id

@@ -16,9 +16,10 @@ function MovieDetail(){
     //genre is our genre store in index.js but our selectedMovie.id range starts at 1, 
     // in order to negate the array being off by 1, we specify that the selectedMovie.id
     //range should be set at 0
-    const selectedGenre = genres[selectedMovie.id -1];
+    const selectedGenre = genres[selectedMovie.id-1];
     console.log('selected genre is, ', selectedGenre);
-
+    console.log('selected movie is', selectedMovie)
+    // console.log('selectedMovie is, ', selectedGenre.movie.title);
     const homePageDirection= () => {
         history.push('/')
     }
@@ -40,7 +41,7 @@ function MovieDetail(){
                           {selectedMovie.description} 
                           </h2>
                     </div>
-                    <h2> {selectedGenre.genre_title} </h2>
+                    <h2>  </h2>
         </div>
                   
           <footer>
