@@ -17,9 +17,11 @@ This version uses React, Redux, Express, Passport, and PostgreSQL (a full list o
 An app built to see a list of movies and upon clicking a movie, the user should be brought to a detail page
 
 ## Screenshots
-Main Page
+Main Page:
+
 ![Screen Shot 2022-03-24 at 9 06 30 AM](https://user-images.githubusercontent.com/88753277/159936530-81e6b2a3-5cd0-413b-8621-945db9bfb5a3.png)
-Detail Page
+Detail Page: 
+
 ![Screen Shot 2022-03-24 at 9 16 08 AM](https://user-images.githubusercontent.com/88753277/159936584-c3355a75-068e-4b6c-bbef-3a2ae0f137e0.png)
 
 ## Built With
